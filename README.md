@@ -31,7 +31,7 @@ To run this website on your machine you need to install anyone server such as WA
 ![front page](ScreenShots/checkout.PNG)</br></br>
 7)Order Details:**</br></br>
 ![front page](ScreenShots/order.PNG)</br></br>
-**Authors:**\</br></br>
-**Sayali Pawar**\
+**Authors:**</br></br>
+**Sayali Pawar**
 
 
