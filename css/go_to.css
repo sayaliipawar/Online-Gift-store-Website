@@ -1,0 +1,34 @@
+
+#go-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 600;
+    display: none;
+}
+#go-top a {
+    text-decoration: none;
+    border: 0 none;
+    display: block;
+    height: 66px;
+    width: 62px;
+    line-height: 66px;
+    text-align: center;
+    background: #111111;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+#go-top a i {
+    font-size: 30px;
+    line-height: inherit;
+}
+#go-top a:hover {
+    background: #FFFFFF;
+    color:#111111;
+
+}

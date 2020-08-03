@@ -1,0 +1,389 @@
+
+/*For background gradient color*/
+div.gradient{
+      background:linear-gradient(to right,black,grey);
+      margin-top:-20px;
+}
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #3498db;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    z-index: 1001;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #e74c3c;
+
+    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #f9c922;
+
+    -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+@keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #111111;
+    z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+/* Loaded styles */
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(-100%);  /* IE 9 */
+            transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(100%);  /* IE 9 */
+            transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+.loaded #loader {
+    opacity: 0;
+
+    -webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+            transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+
+}
+.loaded #loader-wrapper {
+    visibility: hidden;
+
+    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateY(-100%);  /* IE 9 */
+            transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.3s 1s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+            transition: all 0.3s 1s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+
+
+/* Follow Icons */
+#social {
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.smGlobalBtn {
+  /* global button class */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 2px 2px #999;
+  padding: 0px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+}
+.facebookBtn {
+  background: #4060A5;
+  margin-right: 10px;
+}
+
+.facebookBtn:before {
+  /* use :before to add the relevant icons */
+  font-family: "FontAwesome";
+  content: "\f09a";
+  /* add facebook icon */ 
+}
+
+.facebookBtn:hover {
+  color: #2196f3;
+  background: #111111;
+  transition-duration: 0.5s;
+  transition: background,color 0.5s ease;
+}
+
+
+
+/* google plus button class*/
+
+.googleplusBtn {
+  background: #e64522;
+}
+
+.googleplusBtn:before {
+  font-family: "FontAwesome";
+  content: "\f0d5";
+  /* add googleplus icon */
+}
+
+.googleplusBtn:hover {
+  color: #e64522;
+  background: #111111;
+  transition-duration: 0.5s;
+  transition: background,color 0.5s ease;
+}
+
+.slider_adjust{
+  width:100%;
+  height:100%;
+  position: absolute; 
+  z-index: -1;
+  left:0;
+  margin-top:0px;
+}
+/* CSS FOR common Elements Starts */
+a.brand-logo
+{
+  color:white;
+  font-size:28px;
+  padding-left:20px;
+  transition-duration:0.7s;
+}
+a.brand-logo:hover{
+  font-size: 31px;
+  color:#2196f3;
+  transition-duration:0.7s;
+}
+.grad1{
+  background: linear-gradient(to right,black, grey); /* Standard syntax (must be last) */
+}
+a.navlink{
+  font-size: 16px;
+  transition-duration: .7s;
+}
+a.navlink:hover{
+  color:#2196f3;
+  font-size: 18px;
+  text-decoration: none;
+  transition-duration: .7s;
+}
+a.dropdown_link{
+  color:#ffffff;
+  background-color: black;
+  font-size: 16px;
+  transition-duration: .7s;
+}
+a.dropdown_link:hover{
+  color:white;
+  font-size: 18px;
+  text-decoration: none;
+  transition-duration: .7s; 
+}
+div.footer-copyright                                                    /* Footer Copyright */
+{
+  transition: color 1s ease,font-size 1s ease;
+}
+div.footer-copyright:hover                                              /* Footer hover  */
+{
+  font-size: 18px;
+  color:#2196f3;
+  text-decoration:bold;
+}
+a.footerlogo
+{
+  font-size: 31px;
+  transition-duration: .7s;
+  color:white;
+  text-decoration:none;
+
+}
+
+a.footerlogo:hover
+{
+  color:#2196f3;
+  font-family:roboto;
+  font-size:34px;
+  transition-duration: .7s;
+  text-decoration:bold;
+}
+a.link                                                                  /* Footer Link home|aboutUs|contact*/
+{
+  font-size: 20px;
+  transition-duration:0.7s;
+  color:white;
+}
+a.link:hover                                                            /* Footer Hover */
+{
+  transition: color 0.8s ease;
+  transition-duration: 0.7s;
+  transition: font-size 0.8s ease;
+  color:#2196f3;
+  font-size: 22px;
+}
+/*Footer CSS ENDS */
+
+/*About Us CSS Starts*/
+.material-icons.md-166 {
+  font-size:180px;
+  transition-duration: 1s;
+  line-height: 250px;
+  vertical-align: middle;
+}
+.material-icons.md-166:hover {
+  font-size:200px;
+  color:#2196f3;
+  transition-duration: 1s;
+}
+/* About Us CSS Ends
+/* Contact Us CSS*/
+.contacttitle{
+  font-size: 36px;
+}
+
+/*Contact Us CSS Ends */
+/*Sign Up CSS Starts */
+.signuptitle{
+  font-size:40px;
+}
+.signupcardpadding{
+  margin-top:40px;
+}
+.loginlink{
+  color:#d81b60;
+  transition-duration: 0.6s;
+}
+.loginlink:hover{
+  color:#2196f3;
+  font-size: 28px;
+  text-decoration: underline;
+  transition-duration: 0.6s;
+}
+.btn:hover
+{ font-weight: bold;
+  font-size: 20px;
+  color:#2196f3;
+  text-decoration: none;
+  transition-duration: 0.6s;
+}
+/*Sign Up CSS Ends */
+/* Media Queries */
+/* css for cards*/
+.card{
+
+
+}
+.card-title1{
+      font-size: 18px;
+      
+    }
+/* for index animation on scroll*/
+h3,h5,h6{
+font-weight:bold;
+color:black;
+margin:5%;
+      }
+
+.anime-start-1 {
+opacity: 0;
+transform: translate3d(-100px, 0, 0);
+transition:2.5s;
+}
+.anime-end-1 {
+opacity: 1;
+transform: translate3d(0,0,0);
+}
+.anime-start-2 {
+opacity: 0;
+transform: translate3d(-100px, 0, 0);
+transition:2.1s;
+}
+.anime-end-2 {
+opacity: 1;
+transform: translate3d(0,0,0);
+}
+.anime-start-3 {
+opacity: 0;
+transform: translate3d(-100px, 0, 0);
+transition:1.7s;
+}
+.anime-end-3 {
+opacity: 1;
+transform: translate3d(0,0,0);
+}
+.anime-start-4 {
+opacity: 0;
+transform: translate3d(-100px, 0, 0);
+transition:1.2s;
+}
+.anime-end-4{
+opacity: 1;
+transform: translate3d(0,0,0);
+}
